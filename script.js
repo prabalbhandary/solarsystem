@@ -13,6 +13,31 @@ const createStar = () => {
 
 createStar();
 
+const createAsteroids = () => {
+    const asteroidBelt = document.querySelector('.asteroid-belt');
+    for (let i = 0; i < 50; i++) { // Create 50 asteroids
+        const asteroid = document.createElement('div');
+        asteroid.className = 'asteroid';
+        asteroid.style.width = '2em'; // Size of the asteroid
+        asteroid.style.height = '2em'; // Size of the asteroid
+        asteroid.style.borderRadius = '50%';
+        asteroid.style.backgroundColor = 'gray';
+        asteroid.style.position = 'absolute';
+        
+        // Random position within the belt
+        const angle = Math.random() * 2 * Math.PI;
+        const radius = 18; // Adjust to fit within the asteroid belt
+        asteroid.style.top = `${18 + radius * Math.sin(angle)}em`;
+        asteroid.style.left = `${18 + radius * Math.cos(angle)}em`;
+
+        asteroidBelt.appendChild(asteroid);
+    }
+};
+
+// Call the function after the DOM content is loaded
+document.addEventListener('DOMContentLoaded', createAsteroids);
+
+
 const backgroundAudio = document.getElementById('background-audio');
 backgroundAudio.loop = true;
 
