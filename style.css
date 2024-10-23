@@ -204,13 +204,3 @@ img{
         transform: rotate(360deg);
     }
 }
-.asteroid-belt {
-    position: absolute;
-    top: 5em; /* Adjust as needed */
-    left: 5em; /* Adjust as needed */
-    width: 36em; /* Width similar to the distance between Mars and Jupiter */
-    height: 36em; /* Height similar to the distance between Mars and Jupiter */
-    border: 0.1em dashed gray; /* Visual representation of the belt */
-    border-radius: 50%;
-    overflow: hidden; /* Contain the asteroids */
-}
